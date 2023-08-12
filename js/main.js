@@ -5,16 +5,16 @@
 
 	var projectsArray = [
 		{
-			"id": "projectTykOperator",
-			"url": "https://github.com/TykTechnologies/tyk-operator"
+			"id": "projectTetris",
+			"url": "https://github.com/joseeeortizz/TetrisGame"
 		},
 		{
-			"id": "projectCloudixia",
-			"url": "https://ajtima.com"
+			"id": "projectResume",
+			"url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
 		},
 		{
-			"id": "projectServ",
-			"url": "https://www.getserv.io"
+			"id": "projectCybersecurity",
+			"url": ""
 		},
 		{
 			"id": "projectSnake",
