@@ -5,10 +5,6 @@
 
 	var projectsArray = [
 		{
-			"id": "projectTetris",
-			"url": "https://github.com/joseeeortizz/TetrisGame"
-		},
-		{
 			"id": "projectResume",
 			"url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
 		},
