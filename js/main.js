@@ -9,12 +9,24 @@
 			"url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
 		},
 		{
-			"id": "projectCybersecurity",
-			"url": ""
+			"id": "projectPorfolio",
+			"url": "https://github.com/joseeeortizz/joseeeortizz.github.io"
 		},
 		{
 			"id": "projectSnake",
 			"url": "https://github.com/joseeeortizz/SNAKE"
+		},
+		{
+			"id": "projectNew",
+			"url": ""
+		},
+		{
+			"id": "projectNew",
+			"url": ""
+		},
+		{
+			"id": "projectNew",
+			"url": ""
 		},
 		{
 			"id": "projectNew",
