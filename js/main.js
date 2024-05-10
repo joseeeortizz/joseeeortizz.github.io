@@ -9,7 +9,7 @@
 			"url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
 		},
 		{
-			"id": "projectPorfolio",
+			"id": "projectPortfolio",
 			"url": "https://github.com/joseeeortizz/joseeeortizz.github.io"
 		},
 		{
