@@ -34,12 +34,23 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
-
-  </head>
+  <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
 <body>
-  <div class="container">
-    <iframe src="Jose Ortiz - Resume01.pdf" width="100%" height="600px"></iframe>
-  </div>
+  <style>
+    .container {
+      position: relative;
+      padding-bottom: 56.25%; /* Adjust this value for different aspect ratios */
+    }
 
-   </body>
-</html>
+    .container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <div class="container">
+    <iframe src="Jose Ortiz - Resume01.pdf" ></iframe>
+  </div
