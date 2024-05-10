@@ -19,18 +19,6 @@
 		{
 			"id": "projectNew",
 			"url": ""
-		},
-		{
-			"id": "projectNew",
-			"url": ""
-		},
-		{
-			"id": "projectNew",
-			"url": ""
-		},
-		{
-			"id": "projectNew",
-			"url": ""
 		}
 	]
 
