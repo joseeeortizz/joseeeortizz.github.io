@@ -118,25 +118,25 @@
         $(document).ready(function(){
             // Blog entries data
             var blogEntries = [
-                
+
                 {
-                    image: "america",
+                    image: "images/blogimg/US flag.png",
                     title: "God Bless America",
-                    content: "soon...",
+                    content: "<center> Happy 4th of July! <br> - Jose",
                     location: "New York, NY",
                     date: "07/04/2024"
                 },
                 {
-                    image: "social media",
+                    image: "",
                     title: "Death to Social Media",
-                    content: "soon...",
+                    content: "After a good couple of years, my relationship with social media has deteriorated. Facebook was my first taste of social media around 2007. I wasn’t old enough to have an account when my brother created a profile for me. At one point, it was the oldest social platform I had under my ‘name’. After reading George Orwell’s 1984, I was inspired to delete my Facebook account. This book, along with realizing how these social media platforms slowly became a medium that promoted sexual content and kept us entertained for extended periods through endless scrolling, prompted my decision. Since the COVID-19 pandemic, I’ve deleted my Instagram account multiple times. I actually enjoyed the app; it was a good medium to share the various pictures I took on my handheld device. I tried deleting my account for 30 days, but it went further than that after I realized that I didn’t really need to be on the app and that I wasn’t missing out on anything. The millions of people posting and reacting to all the information shared on those social networking platforms were still going to do it regardless of whether I joined them or not. I find no amusement in these platforms like I used to. Like many others, I felt that I was just wasting my time consuming content rather than doing something meaningful. Death to Social Media. <br> -Jose",
                     location: "New York, NY",
                     date: "07/02/2024"
                 },
                 {
                     image: "images/JoseMugshot2024.jpg",
                     title: "Deep Work",
-                    content: "I am currently reading Cal Newport's book on Deep Work. I am almost halfway through the book, and I have definitely have found some interesting points. I will be writing some takeaways on the book soon.",
+                    content: "I am currently reading Cal Newport's book on Deep Work. I am about halfway through the book, and I have definitely have found some interesting points. I will be writing some takeaways on the book soon.",
                     location: "New York, NY",
                     date: "07/01/2024"
                 },
@@ -162,7 +162,7 @@
                 var html = '';
                 entries.forEach(function(entry) {
                     html += '<div class="grid-item">';
-                    html += '<img src="' + entry.image + '" alt="' + entry.title + '">';
+                    html += '<img src="' + entry.image + '" alt="' + '">';
                     html += '<h3>' + entry.title + '</h3>';
                     html += '<p>' + entry.content + '<br>' + '<br>' + entry.location + '<br>' + entry.date + '</p>';
                     html += '</div>';
