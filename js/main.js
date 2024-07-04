@@ -17,9 +17,15 @@
 			"url": "https://github.com/joseeeortizz/SNAKE"
 		},
 		{
-			"id": "projectNew",
-			"url": ""
-		}
+			"id": "CSCI-127",
+			"url": "https://github.com/joseeeortizz/CSCI127-Code"
+		},
+		{
+			"id": "MAC-286",
+			"url": "https://github.com/joseeeortizz/MAC-286-code"
+		},
+		
+
 	]
 
 	projectsArray.forEach(element => {
