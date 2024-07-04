@@ -17,13 +17,17 @@
 			"url": "https://github.com/joseeeortizz/SNAKE"
 		},
 		{
-			"id": "CSCI-127",
+			"id": "projectCSCI127",
 			"url": "https://github.com/joseeeortizz/CSCI127-Code"
 		},
 		{
-			"id": "MAC-286",
+			"id": "projectMAC286",
 			"url": "https://github.com/joseeeortizz/MAC-286-code"
 		},
+		{
+			"id": "projectNew",
+			"url": ""
+		}
 		
 
 	]
