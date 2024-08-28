@@ -25,8 +25,8 @@
 			"url": "https://github.com/joseeeortizz/MAC-286-code"
 		},
 		{
-			"id": "projectNew",
-			"url": ""
+			"id": "projectCSCI132",
+			"url": "https://github.com/joseeeortizz/CSCI-132"
 		}
 		
 
