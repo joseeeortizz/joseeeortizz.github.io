@@ -1,70 +1,79 @@
 ;
 (function () {
 
-	'use strict';
+    'use strict';
 
-	var projectsArray = [
-		{
-			"id": "projectResume",
-			"url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
-		},
-		{
-			"id": "projectPortfolio",
-			"url": "https://github.com/joseeeortizz/joseeeortizz.github.io"
-		},
-		{
-			"id": "projectSnake",
-			"url": "https://github.com/joseeeortizz/SNAKE"
-		},
-		{
-			"id": "projectCSCI127",
-			"url": "https://github.com/joseeeortizz/CSCI127-Code"
-		},
-		{
-			"id": "projectMAC286",
-			"url": "https://github.com/joseeeortizz/MAC-286-code"
-		},
-		{
-			"id": "projectCSCI132",
-			"url": "https://github.com/joseeeortizz/CSCI-132"
-		},
-		{
-			"id": "projectNew",
-			"url": ""
-		},
-		
+    var projectsArray = [
+        {
+            "id": "projectResume",
+            "url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
+        },
+        {
+            "id": "projectPortfolio",
+            "url": "https://github.com/joseeeortizz/joseeeortizz.github.io"
+        },
+        {
+            "id": "projectSnake",
+            "url": "https://github.com/joseeeortizz/SNAKE"
+        },
+        {
+            "id": "projectCSCI127",
+            "url": "https://github.com/joseeeortizz/CSCI127-Code"
+        },
+        {
+            "id": "projectMAC286",
+            "url": "https://github.com/joseeeortizz/MAC-286-code"
+        },
+        {
+            "id": "projectCSCI132",
+            "url": "https://github.com/joseeeortizz/CSCI-132"
+        },
+        {
+            "id": "projectNew",
+            "url": ""
+        },
+    ];
 
-	]
+    projectsArray.forEach(element => {
+        var projectObject = document.getElementById(element.id);
+        projectObject.style.cursor = 'pointer';
+        projectObject.onclick = function() {
+            window.open(element.url, "_blank");
+        }
+    });
 
-	projectsArray.forEach(element => {
-		var projectObject = document.getElementById(element.id);
-		projectObject.style.cursor = 'pointer';
-		projectObject.onclick = function() {
-			window.open( 
-				element.url, "_blank"); 
-		}
-	});
+    // Add "Load More" functionality
+    document.getElementById("loadMore").addEventListener("click", function() {
+        var moreProjects = document.querySelector(".more-projects");
+        var isHidden = moreProjects.style.display === "none";
+
+        // Toggle visibility
+        moreProjects.style.display = isHidden ? "block" : "none";
+        
+        // Optionally change button text to "Show Less"
+        this.textContent = isHidden ? "Show Less" : "Load More";
+    });
 
 	var isMobile = {
-		Android: function () {
-			return navigator.userAgent.match(/Android/i);
-		},
-		BlackBerry: function () {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-		iOS: function () {
-			return navigator.userAgent.match(/iPhone|iPad|iPod|MacIntel/i);
-		},
-		Opera: function () {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-		Windows: function () {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-		any: function () {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod|MacIntel/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
 
 	var fullHeight = function () {
 
@@ -297,27 +306,21 @@
 
 	// Document on load.
 	$(function () {
-		fullHeight();
-		counter();
-		counterWayPoint();
-		contentWayPoint();
-		burgerMenu();
+        fullHeight();
+        counter();
+        counterWayPoint();
+        contentWayPoint();
+        burgerMenu();
+        clickMenu();
+        mobileMenuOutsideClick();
+        sliderMain();
+        owlCrouselFeatureSlide();
 
-		clickMenu();
-		// navActive();
-		navigationSection();
-		// windowScroll();
-
-
-		mobileMenuOutsideClick();
-		sliderMain();
-		owlCrouselFeatureSlide();
-
-		$(window).on('beforeunload', function() {
-			$(window).scrollTop(0);
-		});
-	});
-
+        // Scroll to top on reload
+        $(window).on('beforeunload', function() {
+            $(window).scrollTop(0);
+        });
+    });
 
 }());
 

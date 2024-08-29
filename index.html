@@ -193,25 +193,51 @@
 				<section class="colorlib-work" data-section="work">
 					<div class="colorlib-narrow-content">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-								data-animate-effect="fadeInLeft">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 								<span class="heading-meta">Work</span>
 								<h2 class="colorlib-heading animate-box">Projects</h2>
 							</div>
 						</div>
 						<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 							<div class="col-md-12">
-								<p class="work-menu"><span>
-									<a href="https://joseeeortizz.com/resume"
-															target="_blank" class="btn btn-primary btn-learn">View Resume<i class="fas fa-download"></i></a></p>
-									<!-- <a class="active">View CV Here</a></span></p> -->
+								<p class="work-menu">
+									<span>
+										<a href="https://joseeeortizz.com/resume" target="_blank" class="btn btn-primary btn-learn">
+											View Resume <i class="fas fa-download"></i>
+										</a>
+									</span>
+								</p>
 							</div>
 						</div>
 						<div class="row">
-
+			
+							<!-- Initial 4 Projects -->
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectResume">
+								<div class="project" style="background-image: url(images/RESUME%20UPDATED%20PDF.png); background-position: center;">
+									<div class="desc">
+										<div class="con">
+											<h3><a>LaTeX Resume</a></h3>
+											<h4><a>Lifestyle</a></h4>
+											<span>Great resume template for Computer Science undergraduates.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+			
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectPortfolio">
+								<div class="project" style="background-image: url(images/PortfolioSC.png); background-position: center;">
+									<div class="desc">
+										<div class="con">
+											<h3><a>Jose Ortiz's Portfolio Website</a></h3>
+											<h4><a>Coding</a></h4>
+											<span>Portfolio Website code.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+			
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectSnake">
-								<div class="project"
-									style="background-image: url(images/Snake\ Animated.gif); background-position: center;">
+								<div class="project" style="background-image: url(images/Snake%20Animated.gif); background-position: center;">
 									<div class="desc">
 										<div class="con">
 											<h3><a>Snake Game</a></h3>
@@ -221,38 +247,9 @@
 									</div>
 								</div>
 							</div>
-
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectPortfolio">
-								<div class="project"
-									style="background-image: url(images/PortfolioSC.png); background-position: center;">
-									<div class="desc">
-										<div class="con">
-											<h3><a>Jose Ortiz's Portfolio Website</a></h3>
-											<h4><a>Coding</a></h4>
-											<span>Portfolio Website w/ GitHub servers!</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectResume">
-								<div class="project"
-									style="background-image: url(images/RESUME\ UPDATED\ PDF.png); background-position: center;">
-									<div class="desc">
-										<div class="con">
-											<h3><a>LaTeX Resume</a></h3>
-											<h4><a>Lifestyle</a></h4>
-											<span>Great template for CS undergraduates.</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							
-
+			
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectCSCI127">
-								<div class="project"
-									style="background-image: url(images/projects/Hunterlogo.png); background-position: center;">
+								<div class="project" style="background-image: url(images/projects/Hunterlogo.png); background-position: center;">
 									<div class="desc">
 										<div class="con">
 											<h3><a>CSCI-127 code</a></h3>
@@ -262,10 +259,14 @@
 									</div>
 								</div>
 							</div>
-
+							
+						</div>
+			
+						<!-- Hidden Projects (Initially Hidden) -->
+						<div class="row more-projects" style="display: none;">
+			
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectMAC286">
-								<div class="project"
-									style="background-image: url(images/monkey.JPG); background-position: center;">
+								<div class="project" style="background-image: url(images/monkey.JPG); background-position: center;">
 									<div class="desc">
 										<div class="con">
 											<h3><a>MAC-286 code</a></h3>
@@ -275,10 +276,9 @@
 									</div>
 								</div>
 							</div>
-
+			
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectCSCI132">
-								<div class="project"
-									style="background-image: url(images/monkey.JPG); background-position: center;">
+								<div class="project" style="background-image: url(images/projects/LinuxComm.png); background-position: center;">
 									<div class="desc">
 										<div class="con">
 											<h3><a>CSCI-132 code</a></h3>
@@ -288,32 +288,30 @@
 									</div>
 								</div>
 							</div>
-
+			
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" id="projectNew">
-								<div class="project"
-									style="background-image: url(images/monkey.JPG); background-position: center;">
+								<div class="project" style="background-image: url(images/monkey.JPG); background-position: center;">
 									<div class="desc">
 										<div class="con">
-											<h3><a>Coming soon!</a></h3>
+											<h3><a>New Project</a></h3>
 											<h4><a>Coding</a></h4>
 											<span>Coming soon!</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							
-
+			
 						</div>
-						<!-- <div class="row">
-							<div class="col-md-12 animate-box">
-								<p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i
-											class="icon-reload"></i></a></p>
-							</div>
-						</div> -->
+			
+						<!-- Load More Button -->
+						<div class="col-md-12 text-center" data-animate-effect="fadeInTop">
+							<button id="loadMore" class="btn btn-primary btn-lg">Load More</button>
+						</div>
+			
 					</div>
 				</section>
 
-				<!-- SERVICES -->
+				<!-- SERVICES ------------------------------------->
 
 				<section class="colorlib-services" data-section="services">
 					<div class="colorlib-narrow-content">
