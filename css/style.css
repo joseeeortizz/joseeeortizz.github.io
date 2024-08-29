@@ -25,12 +25,12 @@ body {
       font-size: 16px; } }
 
 a {
-  color: #2c98f0;
+  color: #3478F6;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   a:hover, a:active, a:focus {
-    color: #2c98f0;
+    color: #3478F6;
     outline: none;
     text-decoration: none !important; }
 
@@ -60,15 +60,15 @@ figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #2c98f0; }
+  background: #3478F6; }
 
 ::-moz-selection {
   color: #fff;
-  background: #2c98f0; }
+  background: #3478F6; }
 
 ::selection {
   color: #fff;
-  background: #2c98f0; }
+  background: #3478F6; }
 
 #colorlib-page {
   width: 100%;
@@ -84,7 +84,7 @@ figure {
   position: fixed;
   overflow-y: auto;
   z-index: 1001;
-  background: #f2f3f7;
+  background: rgb(245, 245, 247);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -160,7 +160,7 @@ figure {
             bottom: 7px;
             left: 0;
             right: 0;
-            background-color: #2c98f0;
+            background-color: #3478F6;
             visibility: hidden;
             -webkit-transform: scaleX(0);
             -moz-transform: scaleX(0);
@@ -183,7 +183,7 @@ figure {
               -o-transform: scaleX(1);
               transform: scaleX(1); }
         #colorlib-aside #colorlib-main-menu ul li.active a {
-          color: #2c98f0; }
+          color: #3478F6; }
           #colorlib-aside #colorlib-main-menu ul li.active a:after {
             visibility: visible;
             -webkit-transform: scaleX(1);
@@ -215,12 +215,12 @@ figure {
         #colorlib-aside .colorlib-footer ul li a {
           /* color: rgba(255, 255, 255, 0.3); */
           font-size: 32px;
-          color: #2c98f0;
+          color: #3478F6;
           padding: 4px; }
           #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;
             outline: none;
-            color: #2c98f0; }
+            color: #3478F6; }
 
 .container-wrap {
   /* max-width: 1170px; */
@@ -282,7 +282,7 @@ figure {
           #colorlib-hero .flexslider .flex-control-nav li a.flex-active {
             cursor: pointer;
             background: transparent;
-            border: 2px solid #2c98f0; }
+            border: 2px solid #3478F6; }
     #colorlib-hero .flexslider .flex-direction-nav {
       display: none; }
     #colorlib-hero .flexslider .slider-text {
@@ -479,7 +479,7 @@ body.offcanvas {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #2c98f0;
+  background-color: #3478F6;
   color: #fff;
   position: relative;
   -webkit-box-shadow: none !important;
@@ -563,7 +563,7 @@ body.offcanvas {
   display: block;
   width: 40px;
   height: 40px;
-  background: #2c98f0;
+  background: #3478F6;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -639,13 +639,13 @@ body.offcanvas {
   -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
   -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
   box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-  border-bottom: 2px solid #2c98f0; }
+  border-bottom: 2px solid #3478F6; }
   .services .icon2 {
     display: block;
     margin-bottom: 20px; }
     .services .icon2 i {
       font-size: 30px;
-      color: #2c98f0; }
+      color: #3478F6; }
   .services h3 {
     font-family: "Quicksand", Arial, sans-serif;
     font-size: 16px;
@@ -683,7 +683,7 @@ body.offcanvas {
     height: 50px;
     display: table;
     margin: 0 auto;
-    background: #2c98f0; }
+    background: #3478F6; }
     .services .icon:before, .services .icon:after {
       position: absolute;
       left: 0;
@@ -695,14 +695,14 @@ body.offcanvas {
       height: 0;
       border-style: solid;
       border-width: 0 50px 30px 50px;
-      border-color: transparent transparent #2c98f0 transparent; }
+      border-color: transparent transparent #3478F6 transparent; }
     .services .icon:after {
       bottom: -30px;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 30px 50px 0 50px;
-      border-color: #2c98f0 transparent transparent transparent; }
+      border-color: #3478F6 transparent transparent transparent; }
     .services .icon i {
       font-size: 30px;
       color: #fff;
@@ -759,7 +759,7 @@ body.offcanvas {
   overflow: visible; }
 
 .progress-bar {
-  background: #2c98f0;
+  background: #3478F6;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 12px;
@@ -780,7 +780,7 @@ body.offcanvas {
     width: 10px;
     height: 10px;
     content: '';
-    background: #2c98f0;
+    background: #3478F6;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -790,11 +790,11 @@ body.offcanvas {
     top: -22px;
     right: 0; }
   .progress-bar.color-1 {
-    background: #2c98f0; }
+    background: #3478F6; }
     .progress-bar.color-1:after {
-      background: #2c98f0; }
+      background: #3478F6; }
     .progress-bar.color-1 span {
-      color: #2c98f0; }
+      color: #3478F6; }
   .progress-bar.color-2 {
     background: #ec5453; }
     .progress-bar.color-2:after {
@@ -854,7 +854,7 @@ body.offcanvas {
     .colorlib-feature .colorlib-icon i {
       display: table-cell;
       vertical-align: middle;
-      color: #2c98f0;
+      color: #3478F6;
       font-size: 60px;
       height: 100px; }
       @media screen and (max-width: 1200px) {
@@ -876,7 +876,7 @@ body.offcanvas {
   .colorlib-feature.colorlib-feature-sm .colorlib-text {
     margin-top: 30px; }
   .colorlib-feature.colorlib-feature-sm .colorlib-icon i {
-    color: #2c98f0;
+    color: #3478F6;
     font-size: 40px; }
     @media screen and (max-width: 1200px) {
       .colorlib-feature.colorlib-feature-sm .colorlib-icon i {
@@ -949,7 +949,7 @@ body.offcanvas {
   .work-menu span a {
     color: #ffffff; }
     .work-menu span a.active {
-      color: #2c98f0; }
+      color: #3478F6; }
 
 .project {
   background-size: cover;
@@ -966,7 +966,7 @@ body.offcanvas {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2c98f0;
+    background: #3478F6;
     opacity: 0;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -1086,7 +1086,7 @@ body.offcanvas {
       width: 100px;
       height: 100px;
       font-size: 50px;
-      color: #2c98f0;
+      color: #3478F6;
       background: #fff;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -1139,11 +1139,11 @@ body.offcanvas {
         .colorlib-social li a {
           padding: 10px 8px; } }
       .colorlib-social li a:hover {
-        color: #2c98f0; }
+        color: #3478F6; }
       .colorlib-social li a:hover, .colorlib-social li a:active, .colorlib-social li a:focus {
         outline: none;
         text-decoration: none;
-        color: #2c98f0; }
+        color: #3478F6; }
 
 #map {
   width: 100%;
@@ -1175,19 +1175,19 @@ body.offcanvas {
         -ms-border-radius: 2px;
         border-radius: 2px; }
       .pagination li a:hover, .pagination li a:focus {
-        background: #2c98f0;
+        background: #3478F6;
         color: #fff;
-        border: 1px solid #2c98f0; }
+        border: 1px solid #3478F6; }
       @media screen and (max-width: 768px) {
         .pagination li a {
           padding: 7px 15px; } }
     .pagination li.active a {
-      background: #2c98f0;
-      border: 1px solid #2c98f0 !important; }
+      background: #3478F6;
+      border: 1px solid #3478F6 !important; }
       .pagination li.active a:hover, .pagination li.active a:focus {
-        background: #2c98f0;
+        background: #3478F6;
         color: #fff;
-        border: 1px solid #2c98f0 !important; }
+        border: 1px solid #3478F6 !important; }
 
 .btn {
   margin-right: 4px;
@@ -1217,18 +1217,18 @@ body.offcanvas {
     outline: none !important; }
 
 .btn-primary {
-  background: #2c98f0;
+  background: #3478F6;
   color: #fff;
-  border: 2px solid #2c98f0; }
+  border: 2px solid #3478F6; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #44a4f2 !important;
-    border-color: #44a4f2 !important; }
+    background: #5f97ff !important;
+    border-color: #5f97ff !important; }
   .btn-primary.btn-outline {
     background: transparent;
-    color: #2c98f0;
-    border: 2px solid #2c98f0; }
+    color: #3478F6;
+    border: 2px solid #3478F6; }
     .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-      background: #2c98f0;
+      background: #3478F6;
       color: #fff; }
 
 .btn-success {
