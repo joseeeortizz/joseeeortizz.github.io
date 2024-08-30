@@ -84,7 +84,7 @@ figure {
   position: fixed;
   overflow-y: auto;
   z-index: 1001;
-  background: rgb(245, 245, 247);
+  background: #f5f5f7;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -457,7 +457,7 @@ body.offcanvas {
 
 .hire {
   padding: 2em;
-  background: #f9bf3f; }
+  background: #F4B400; }
   .hire h2 {
     line-height: 1.5; }
   .hire .btn-hire {
@@ -577,13 +577,13 @@ body.offcanvas {
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
     color: #fff; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-2 {
-    background: #ec5453; }
+    background: #DB4437; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-3 {
-    background: #f9bf3f; }
+    background: #F4B400; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-4 {
-    background: #a84cb8; }
+    background: #833AB4; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-5 {
-    background: #2fa499; }
+    background: #0F9D58; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
@@ -651,21 +651,21 @@ body.offcanvas {
     font-size: 16px;
     font-weight: 500; }
   .services.color-2 {
-    border-bottom: 2px solid #ec5453; }
+    border-bottom: 2px solid #DB4437; }
     .services.color-2 .icon2 i {
-      color: #ec5453; }
+      color: #DB4437; }
   .services.color-3 {
-    border-bottom: 2px solid #f9bf3f; }
+    border-bottom: 2px solid #F4B400; }
     .services.color-3 .icon2 i {
-      color: #f9bf3f; }
+      color: #F4B400; }
   .services.color-4 {
-    border-bottom: 2px solid #a84cb8; }
+    border-bottom: 2px solid #833AB4; }
     .services.color-4 .icon2 i {
-      color: #a84cb8; }
+      color: #833AB4; }
   .services.color-5 {
-    border-bottom: 2px solid #2fa499; }
+    border-bottom: 2px solid #0F9D58; }
   .services.color-6 {
-    border-bottom: 2px solid #4054b2; }
+    border-bottom: 2px solid #004b64; }
 
 .services {
   margin-bottom: 80px;
@@ -716,35 +716,35 @@ body.offcanvas {
       font-weight: 700;
       text-transform: uppercase; }
   .services.color-2 .icon {
-    background: #ec5453; }
+    background: #DB4437; }
     .services.color-2 .icon:before {
-      border-color: transparent transparent #ec5453 transparent; }
+      border-color: transparent transparent #DB4437 transparent; }
     .services.color-2 .icon:after {
-      border-color: #ec5453 transparent transparent transparent; }
+      border-color: #DB4437 transparent transparent transparent; }
   .services.color-3 .icon {
-    background: #f9bf3f; }
+    background: #F4B400; }
     .services.color-3 .icon:before {
-      border-color: transparent transparent #f9bf3f transparent; }
+      border-color: transparent transparent #F4B400 transparent; }
     .services.color-3 .icon:after {
-      border-color: #f9bf3f transparent transparent transparent; }
+      border-color: #F4B400 transparent transparent transparent; }
   .services.color-4 .icon {
-    background: #a84cb8; }
+    background: #833AB4; }
     .services.color-4 .icon:before {
-      border-color: transparent transparent #a84cb8 transparent; }
+      border-color: transparent transparent #833AB4 transparent; }
     .services.color-4 .icon:after {
-      border-color: #a84cb8 transparent transparent transparent; }
+      border-color: #833AB4 transparent transparent transparent; }
   .services.color-5 .icon {
-    background: #2fa499; }
+    background: #0F9D58; }
     .services.color-5 .icon:before {
-      border-color: transparent transparent #2fa499 transparent; }
+      border-color: transparent transparent #0F9D58 transparent; }
     .services.color-5 .icon:after {
-      border-color: #2fa499 transparent transparent transparent; }
+      border-color: #0F9D58 transparent transparent transparent; }
   .services.color-6 .icon {
-    background: #4054b2; }
+    background: #004b64; }
     .services.color-6 .icon:before {
-      border-color: transparent transparent #4054b2 transparent; }
+      border-color: transparent transparent #004b64 transparent; }
     .services.color-6 .icon:after {
-      border-color: #4054b2 transparent transparent transparent; }
+      border-color: #004b64 transparent transparent transparent; }
 
 .progress-wrap h3 {
   font-size: 16px;
@@ -796,35 +796,35 @@ body.offcanvas {
     .progress-bar.color-1 span {
       color: #3478F6; }
   .progress-bar.color-2 {
-    background: #ec5453; }
+    background: #DB4437; }
     .progress-bar.color-2:after {
-      background: #ec5453; }
+      background: #DB4437; }
     .progress-bar.color-2 span {
-      color: #ec5453; }
+      color: #DB4437; }
   .progress-bar.color-3 {
-    background: #f9bf3f; }
+    background: #F4B400; }
     .progress-bar.color-3:after {
-      background: #f9bf3f; }
+      background: #F4B400; }
     .progress-bar.color-3 span {
-      color: #f9bf3f; }
+      color: #F4B400; }
   .progress-bar.color-4 {
-    background: #a84cb8; }
+    background: #833AB4; }
     .progress-bar.color-4:after {
-      background: #a84cb8; }
+      background: #833AB4; }
     .progress-bar.color-4 span {
-      color: #a84cb8; }
+      color: #833AB4; }
   .progress-bar.color-5 {
-    background: #2fa499; }
+    background: #0F9D58; }
     .progress-bar.color-5:after {
-      background: #2fa499; }
+      background: #0F9D58; }
     .progress-bar.color-5 span {
-      color: #2fa499; }
+      color: #0F9D58; }
   .progress-bar.color-6 {
-    background: #4054b2; }
+    background: #004b64; }
     .progress-bar.color-6:after {
-      background: #4054b2; }
+      background: #004b64; }
     .progress-bar.color-6 span {
-      color: #4054b2; }
+      color: #004b64; }
 
 .edu-feature{
   margin-bottom: 0 !important;}
