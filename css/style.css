@@ -412,10 +412,7 @@ body.offcanvas {
 
 @media screen and (min-width: 768px) {
   .colorlib-contact {
-    padding-bottom: 20em; 
-  padding-top: 10em; 
-  background-color: #000000;  
-} }
+    padding-bottom: 20em; } }
         
 .author-img {
   background-size: cover;
@@ -428,7 +425,6 @@ body.offcanvas {
   margin-bottom: 4em;
   font-weight: 700;
   text-transform: uppercase;
-
   letter-spacing: 5px;
   line-height: 1.8;
   position: relative; }
@@ -437,10 +433,6 @@ body.offcanvas {
   @media screen and (max-width: 768px) {
     .colorlib-heading {
       margin-bottom: 3em; } }
-      .colorlib-heading-contact
-      {
-        color: #ffffff;
-      }
 
 .heading-meta {
   margin-bottom: 15px;
@@ -450,14 +442,6 @@ body.offcanvas {
   color: #999999;
   font-weight: 500;
   letter-spacing: 5px; }
-  .heading-meta-contact {
-    margin-bottom: 15px;
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-weight: 500;
-    letter-spacing: 5px; }
 
 .about-img {
   width: 100%;
