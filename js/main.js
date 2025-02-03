@@ -29,6 +29,10 @@
             "url": "https://github.com/joseeeortizz/CSCI-132"
         },
         {
+            "id": "projectCSCI395",
+            "url": "https://github.com/joseeeortizz/CSCI-395"
+        },
+		{
             "id": "projectNew",
             "url": ""
         },
