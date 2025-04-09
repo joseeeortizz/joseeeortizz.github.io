@@ -18,6 +18,12 @@
       color: #111;
       line-height: 1.6;
       padding: 2rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #111;
+      color: #f7f7f7;
     }
 
     header {
@@ -37,6 +43,10 @@
       text-decoration: none;
       color: #333;
       font-weight: 500;
+    }
+
+    nav a.dark-mode {
+      color: #f7f7f7;
     }
 
     .hero {
@@ -63,6 +73,11 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: 600;
+    }
+
+    .cta-button.dark-mode {
+      background-color: #f7f7f7;
+      color: #111;
     }
 
     .section {
@@ -116,6 +131,18 @@
       font-size: 0.9rem;
       color: #aaa;
     }
+
+    .toggle-button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #111;
+    }
+
+    body.dark-mode .toggle-button {
+      color: #f7f7f7; /* Change text color to light when dark mode is active */
+    }
   </style>
 </head>
 <body>
@@ -127,6 +154,7 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="toggle-button" id="darkModeToggle">Dark</button>
   </header>
 
   <section class="hero">
@@ -179,5 +207,21 @@
   <footer>
     <p>&copy; 2025 Ortizify. Built with intention.</p>
   </footer>
+
+  <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const navLinks = document.querySelectorAll('nav a');
+    const ctaButton = document.querySelector('.cta-button');
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      navLinks.forEach(link => link.classList.toggle('dark-mode'));
+      ctaButton.classList.toggle('dark-mode');
+
+      const isDarkMode = body.classList.contains('dark-mode');
+      toggleButton.textContent = isDarkMode ? 'Light' : 'Dark';
+    });
+  </script>
 </body>
 </html>
