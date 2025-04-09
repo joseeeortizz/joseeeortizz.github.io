@@ -1,50 +1,183 @@
-/*
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ortizify</title>
-    <link rel="stylesheet" href="ortizstyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ortizify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f7;
+      color: #111;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-top: 4rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      color: #444;
+      max-width: 700px;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+
+    .product-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Ortizify</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">Ortizify</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="home">
-            <h2>Welcome to Ortizify</h2>
-            <p>p1.</p>
-        </section>
+  <section class="hero">
+    <h1>Welcome to Ortizify!</h1>
+    <p>Tech-inspired fashion and resale curated with purpose and style.</p>
+    <a href="#shop" class="cta-button">Explore Drops</a>
+  </section>
 
-        <section id="blog">
-            <h2>Blog</h2>
-            <p>p2.</p>
-        </section>
+  <section id="about" class="section">
+    <h2>About Ortizify</h2>
+    <p>Ortizify is a hybrid brand blending minimal tech aesthetics with curated resale finds. From digital drops to physical pieces, every product reflects originality and intention. Our mission is to fuse style and substance—whether through code, clothing, or community. </p>
+  </section>
 
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <p>p3.</p>
-        </section>
+  <section id="shop" class="section">
+    <h2>Latest Drops</h2>
+    <div class="shop-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product 1">
+        <h3>Vintage Tech Tee</h3>
+        <p>Soft cotton tee with a minimal Ortizify tag. Drop 01 exclusive.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product 2">
+        <h3>Reworked Jacket</h3>
+        <p>Upcycled and tech-stitched jacket with functional design details.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product 3">
+        <h3>Ortizify Sticker Pack</h3>
+        <p>Minimal stickers for laptops, phones, and notebooks.</p>
+      </div>
+    </div>
+  </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>p4</p>
-        </section>
-    </main>
+  <section id="projects" class="section">
+    <h2>Digital Projects</h2>
+    <p>Ortizify is more than resale—it's a tech-first brand. Check out our digital tools, templates, and community-driven builds.</p>
+    <ul>
+      <li>✨ Notion Productivity Kit (coming soon)</li>
+      <li>👕 Mockup Generator (in development)</li>
+      <li>🔧 Personal site templates (launching summer 2025)</li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Ortizify. All rights reserved.</p>
-    </footer>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>For collabs, custom orders, or questions: <a href="mailto:joseortizv.nyc@gmail.com">joseortizv.nyc@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ortizify. Built with intention.</p>
+  </footer>
 </body>
-</html></section>
+</html>
