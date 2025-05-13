@@ -33,7 +33,7 @@
             "url": "https://github.com/joseeeortizz/CSCI-395"
         },{
 			"id": "projectCSCI493",
-			"url": ""
+			"url": "https://github.com/joseeeortizz/CSCI-493"
 		},
 		{
             "id": "projectNew",
