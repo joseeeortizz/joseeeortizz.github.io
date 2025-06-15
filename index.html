@@ -9,14 +9,7 @@
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', 'UA-96989482-1');
-
-	function displayTime() {
-            var currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
-            document.getElementById('clock').textContent = currentTime;
-            setTimeout(displayTime, 1000);
-        }
-    
+	gtag('config', 'UA-96989482-1');    
 	</script>
 
 	<!-- Essential Meta Tags -->
@@ -76,7 +69,7 @@
 
 </head>
 
-<body onload="displayTime()">
+<body>
 	<div id="colorlib-page">
 		<div class="container-wrap">
 			<!-- Navbar Toggle Button -->
@@ -136,7 +129,6 @@
 												<div class="desc">
 													<h1>Hi! <br>I'm Jose Ortiz.</h1>
 													<p>I'm a <strong>CS Student</strong></p>
-													<p id="location"><strong>Time in New York City:</strong> <span id="clock"></span></p>
 												</div>
 											</div>
 										</div>
