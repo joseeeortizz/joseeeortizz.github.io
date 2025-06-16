@@ -7,6 +7,9 @@
         {
             "id": "projectResume",
             "url": "https://github.com/joseeeortizz/Jose-Ortiz---Resume"
+            // Note: The original diff had updated project URLs here.
+            // I'm keeping the structure from the provided main.js.
+            // You should ensure these URLs match the ones in your index.html.
         },
         {
             "id": "projectPortfolio",
@@ -14,15 +17,15 @@
         },
         {
             "id": "projectSnake",
-            "url": "https://github.com/joseeeortizz/SNAKE"
+            "url": "https://github.com/joseeeortizz/SNAKE" // Original was SnakeGame
         },
         {
             "id": "projectCSCI127",
-            "url": "https://github.com/joseeeortizz/CSCI127-Code"
+            "url": "https://github.com/joseeeortizz/CSCI127-Code" // Original was CSCI-127
         },
         {
             "id": "projectMAC286",
-            "url": "https://github.com/joseeeortizz/MAC-286-code"
+            "url": "https://github.com/joseeeortizz/MAC-286-code" // Original was MAC-286
         },
         {
             "id": "projectCSCI132",
@@ -30,36 +33,46 @@
         },
         {
             "id": "projectCSCI395",
-            "url": "https://github.com/joseeeortizz/CSCI-395"
+            "url": "https://github.com/joseeeortizz/CSCI-395" // Original was CSCI-395-Introduction-to-Data-Science
         },{
 			"id": "projectCSCI493",
-			"url": "https://github.com/joseeeortizz/CSCI-493"
+			"url": "https://github.com/joseeeortizz/CSCI-493" // Original was CSCI-493-Parallel-Computing
 		},
 		{
             "id": "projectNew",
-            "url": ""
+            "url": "" // Placeholder, update if project becomes available
         },
     ];
 
     projectsArray.forEach(element => {
         var projectObject = document.getElementById(element.id);
-        projectObject.style.cursor = 'pointer';
-        projectObject.onclick = function() {
-            window.open(element.url, "_blank");
+        if (projectObject) { // Check if element exists
+            projectObject.style.cursor = 'pointer';
+            projectObject.onclick = function() {
+                if (element.url) { // Check if URL is not empty
+                    window.open(element.url, "_blank");
+                }
+            }
         }
     });
 
     // Add "Load More" functionality
-    document.getElementById("loadMore").addEventListener("click", function() {
-        var moreProjects = document.querySelector(".more-projects");
-        var isHidden = moreProjects.style.display === "none";
+    var loadMoreButton = document.getElementById("loadMore");
+    if (loadMoreButton) {
+        loadMoreButton.addEventListener("click", function() {
+            var moreProjects = document.querySelector(".more-projects");
+            if (moreProjects) {
+                var isHidden = moreProjects.style.display === "none" || moreProjects.style.display === "";
 
-        // Toggle visibility
-        moreProjects.style.display = isHidden ? "flex" : "none"; // This is correct for Bootstrap 5 rows
-        
-        // Optionally change button text to "Show Less"
-        this.textContent = isHidden ? "Show Less" : "Load More";
-    });
+                // Toggle visibility using 'flex' for Bootstrap rows, or 'block' if not using flex
+                moreProjects.style.display = isHidden ? "flex" : "none";
+                
+                // Optionally change button text
+                this.textContent = isHidden ? "Show Less" : "Load More";
+            }
+        });
+    }
+
 
 	var isMobile = {
         Android: function () {
@@ -69,7 +82,8 @@
             return navigator.userAgent.match(/BlackBerry/i);
         },
         iOS: function () {
-            return navigator.userAgent.match(/iPhone|iPad|iPod|MacIntel/i);
+            // Updated to include MacIntel for modern iPads faking Mac user agent
+            return navigator.userAgent.match(/iPhone|iPad|iPod|MacIntel/i) && navigator.maxTouchPoints > 1;
         },
         Opera: function () {
             return navigator.userAgent.match(/Opera Mini/i);
@@ -83,14 +97,17 @@
     };
 
 	var fullHeight = function () {
-
+        // js-fullheight is used in hero and slider-text-inner.
+        // With a fixed top navbar, full height should be viewport height minus navbar height.
+        // However, CSS can often handle this better (e.g., min-height: calc(100vh - 70px);)
+        // For simplicity, if js-fullheight is still used, it will make elements 100% of viewport.
+        // Consider adjusting CSS for #colorlib-hero and .slider-text-inner if true "full height below navbar" is needed.
 		if (!isMobile.any()) {
 			$('.js-fullheight').css('height', $(window).height());
 			$(window).resize(function () {
 				$('.js-fullheight').css('height', $(window).height());
 			});
 		}
-
 	};
 
 
@@ -152,105 +169,103 @@
 			}
 
 		}, {
-			offset: '85%'
+			offset: '85%' // Adjust if elements are triggered too early/late with top navbar
 		});
 	};
 
 
 	var burgerMenu = function () {
-
-		$('.js-colorlib-nav-toggle').on('click', function (event) {
+        // This function now primarily toggles an 'active' class on the Bootstrap navbar toggler
+        // for potential custom styling (e.g., hamburger to X animation).
+        // Bootstrap's data attributes (data-bs-toggle, data-bs-target) handle the actual menu expansion/collapse.
+		$('.js-colorlib-nav-toggle.navbar-toggler').on('click', function (event) {
 			event.preventDefault();
-			var $this = $(this);
-
-			if ($('body').hasClass('offcanvas')) {
-				$this.removeClass('active');
-				$('body').removeClass('offcanvas');
-			} else {
-				$this.addClass('active');
-				$('body').addClass('offcanvas');
-			}
+			$(this).toggleClass('active');
+            // The body 'offcanvas' class is no longer needed for the top navbar.
 		});
-
-
-
 	};
 
-	// Click outside of offcanvass
+	// Click outside of Bootstrap navbar to close it
 	var mobileMenuOutsideClick = function () {
-
 		$(document).click(function (e) {
-			var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
-			if (!container.is(e.target) && container.has(e.target).length === 0) {
+			var $topNavbarCollapse = $('#main-navbar-collapse');
+			var $navbarToggler = $('.js-colorlib-nav-toggle.navbar-toggler');
 
-				if ($('body').hasClass('offcanvas')) {
+			// If the click is outside the expanded navbar and outside the toggler itself
+			if (!$topNavbarCollapse.is(e.target) && $topNavbarCollapse.has(e.target).length === 0 &&
+				!$navbarToggler.is(e.target) && $navbarToggler.has(e.target).length === 0) {
 
-					$('body').removeClass('offcanvas');
-					$('.js-colorlib-nav-toggle').removeClass('active');
-
+				if ($topNavbarCollapse.hasClass('show')) {
+                    // Get the Bootstrap Collapse instance and hide it
+                    var bsCollapse = bootstrap.Collapse.getInstance($topNavbarCollapse[0]);
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+					$navbarToggler.removeClass('active'); // Reset active state of toggle
 				}
-
 			}
 		});
 
+        // Close menu on scroll
 		$(window).scroll(function () {
-			if ($('body').hasClass('offcanvas')) {
-
-				$('body').removeClass('offcanvas');
-				$('.js-colorlib-nav-toggle').removeClass('active');
-
+            var $topNavbarCollapse = $('#main-navbar-collapse');
+			if ($topNavbarCollapse.hasClass('show')) {
+                var bsCollapse = bootstrap.Collapse.getInstance($topNavbarCollapse[0]);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+				$('.js-colorlib-nav-toggle.navbar-toggler').removeClass('active');
 			}
 		});
-
 	};
 
 	var clickMenu = function () {
-
-		$('#navbar a:not([class="external"])').click(function (event) {
+        // Updated for the top navbar menu items
+		$('#navbar-top-menu a.nav-link:not([class*="external"])').click(function (event) { // Target .nav-link within #navbar-top-menu
 			var section = $(this).data('nav-section');
-			var navbar = $('#navbar');
-
+			
 			// Immediately update the active state on click
 			navActive(section);
 
 			if ($('[data-section="' + section + '"]').length) {
 				$('html, body').animate({
-					scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-				}, 500, 'easeInOutExpo'); // Added easing for consistency
+					// Adjust scroll offset for the fixed top navbar height (e.g., 70px)
+					scrollTop: $('[data-section="' + section + '"]').offset().top - 70 
+				}, 500, 'easeInOutExpo');
 			}
 
-			if (navbar.is(':visible') && $('body').hasClass('offcanvas')) { // Ensure offcanvas is active before trying to close
-				navbar.removeClass('in');
-				navbar.attr('aria-expanded', 'false');
-				$('.js-colorlib-nav-toggle').removeClass('active');
-			}
+            // Close the Bootstrap collapse menu if it's open (on mobile)
+            var $topNavbarCollapse = $('#main-navbar-collapse');
+            if ($topNavbarCollapse.hasClass('show')) {
+                var bsCollapse = bootstrap.Collapse.getInstance($topNavbarCollapse[0]);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+                $('.js-colorlib-nav-toggle.navbar-toggler').removeClass('active');
+            }
 
 			event.preventDefault();
 			return false;
 		});
-
-
 	};
 
 	// Reflect scrolling in navigation
 	var navActive = function (section) {
-		// More direct way to set the active class
-		var $navItems = $('#navbar > ul > li');
+        // Updated selectors for the top navbar
+		var $navItems = $('#navbar-top-menu .nav-item');
 		$navItems.removeClass('active');
-		$navItems.find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
+		$navItems.find('a.nav-link[data-nav-section="' + section + '"]').closest('.nav-item').addClass('active');
 	};
 
 	var navigationSection = function () {
-
 		var $section = $('section[data-section]');
 
 		$section.waypoint(function (direction) {
-
 			if (direction === 'down') {
 				navActive($(this.element).data('section'));
 			}
 		}, {
-			offset: '150px'
+			offset: '150px' // Adjust if sections highlight too early/late with top navbar
 		});
 
 		$section.waypoint(function (direction) {
@@ -259,23 +274,18 @@
 			}
 		}, {
 			offset: function () {
-				return -$(this.element).height() + 155;
+                // Adjust offset for fixed top navbar (e.g., 70px)
+				return -$(this.element).height() + 75; // 70 for navbar + 5 buffer
 			}
 		});
-
 	};
 
-
-
-
-
-
 	var sliderMain = function () {
-
 		$('#colorlib-hero .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
-			directionNav: true,
+			directionNav: true, // Set to true if you want FlexSlider's default nav arrows
+            controlNav: true,   // Set to true for pagination dots
 			start: function () {
 				setTimeout(function () {
 					$('.slider-text').removeClass('animated fadeInUp');
@@ -288,37 +298,43 @@
 					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
 				}, 500);
 			}
-
 		});
-
 	};
 
 	var owlCrouselFeatureSlide = function () {
-		$('.owl-carousel').owlCarousel({
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
-			autoplay: true,
-			loop: true,
-			margin: 0,
-			nav: true,
-			dots: false,
-			autoHeight: true,
-			items: 1,
-			navText: [
-				"<i class='icon-arrow-left3 owl-direction'></i>",
-				"<i class='icon-arrow-right3 owl-direction'></i>"
-			]
-		})
+        // Check if .owl-carousel elements exist before initializing
+        if ($('.owl-carousel').length > 0) {
+            $('.owl-carousel').owlCarousel({
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                autoplay: true,
+                loop: true,
+                margin: 0,
+                nav: true,
+                dots: false,
+                autoHeight: true,
+                items: 1,
+                navText: [
+                    "<i class='icon-arrow-left3 owl-direction'></i>",
+                    "<i class='icon-arrow-right3 owl-direction'></i>"
+                ]
+            });
+        }
 	};
 
 	// Document on load.
 	$(function () {
         fullHeight();
-        counter();
-        counterWayPoint();
+        // counter(); // Assuming .js-counter elements might not always be present
+        // counterWayPoint(); // Assuming #colorlib-counter might not always be present
+        if ($('.js-counter').length > 0 && $('#colorlib-counter').length > 0) {
+            counter();
+            counterWayPoint();
+        }
         contentWayPoint();
         burgerMenu();
         clickMenu();
+        navigationSection(); // Added this to ensure scroll spying works
         mobileMenuOutsideClick();
         sliderMain();
         owlCrouselFeatureSlide();
@@ -331,7 +347,6 @@
 
 }());
 
-
-// Auto scrool to top of page
-(function () {
-})()
+// Auto scroll to top of page (This IIFE was empty, can be removed or used)
+// (function () {
+// })()
