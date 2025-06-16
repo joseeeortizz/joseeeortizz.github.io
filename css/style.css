@@ -127,13 +127,25 @@ h1, h2, h3, h4, h5, h6 {
     #colorlib-aside #colorlib-logo a {
       display: block;
       text-align: center;
-      color: #1D1D1F; /* Keep dark for readability */
-      padding-right: 0; /* Removed padding as it's centered */
+      color: #1D1D1F;
+      padding-right: 0;
+      text-decoration: none; /* Remove underline */
+    }
+    #colorlib-aside #colorlib-logo a:hover,
+    #colorlib-aside #colorlib-logo a:focus {
+      text-decoration: none; /* Ensure no underline on hover/focus */
     }
   #colorlib-aside #colorlib-main-menu {
     display: block;
     width: 100%;
     padding-top: 1em; /* Add some space above nav */
+  }
+  #colorlib-aside .position a {
+    text-decoration: none; /* Remove underline */
+  }
+  #colorlib-aside .position a:hover,
+  #colorlib-aside .position a:focus {
+    text-decoration: none; /* Ensure no underline on hover/focus */
   }
     #colorlib-aside #colorlib-main-menu .collapse {
       display: block !important;
