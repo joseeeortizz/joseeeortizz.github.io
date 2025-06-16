@@ -1,4 +1,4 @@
-/* --- Full code for style.css --- */
+/* Glass Liquid Inspired CSS */
 
 @font-face {
   font-family: 'icomoon';
@@ -315,7 +315,7 @@ body.offcanvas {
             /* text-align: center; /* Text alignment is handled by .desc or inherited */
             margin: 0; /* Remove horizontal margins, rely on padding and parent width */
             padding: 1.5em; /* Adjust padding for mobile */
-            min-height: auto; /* Allow content to define height on mobile */
+            /* min-height: auto; /* Removed to allow parent's min-height via height:100% to take effect */
           }
         }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
