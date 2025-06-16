@@ -311,7 +311,8 @@ body.offcanvas {
       }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner {
-            /* text-align: center; /* Flex align-items will handle centering of .desc block */
+            display: block; /* Override inherited flex to behave like a standard block */
+            text-align: center; /* Center inline/inline-block children & text within block children */
             margin: 0; /* Remove horizontal margins, rely on padding and parent width */
             padding: 1.5em; /* Adjust padding for mobile */
             min-height: auto; /* Allow content to define height on mobile */
