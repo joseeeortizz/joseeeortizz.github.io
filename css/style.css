@@ -290,29 +290,28 @@ body.offcanvas {
       display: none; } /* Flexslider's own arrows, usually hidden if custom are used */
     #colorlib-hero .flexslider .slider-text {
       /* display: table; Remove this */
-      /* Let's try changing this to flex for centering */
-      display: flex;
-      align-items: center; /* Vertically center flex items */
-      justify-content: center; /* Horizontally center flex items */
-      height: 100%; /* Ensure it takes full height of parent slide (li) for vertical centering */
+      /* display: flex; /* Allow Bootstrap's column classes to manage block layout */
+      /* align-items: center; /* Centering is handled by .slider-text-inner */
+      /* justify-content: center; /* Centering is handled by .slider-text-inner */
+      height: 100%; /* To match parent slide height if needed, though js-fullheight is on inner */
       opacity: 0;
       min-height: 600px; /* Match #colorlib-hero min-height */
-      width: 100%; /* Ensure it spans full width */
+      /* width: auto; /* Let Bootstrap's col-md-8 define the width */
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
-        /* display: table-cell; Remove this */
-        /* vertical-align: middle; Remove this, parent flex handles this */
-        width: 100%; /* Allow it to take full width of its centered parent */
-        min-height: 600px; /* Match parent */
+        width: 100%;           /* Takes full width of .slider-text */
+        height: 100%;          /* Takes full height of .slider-text (js-fullheight and parent flex also contribute) */
         padding: 2.5em;
         position: relative;
-        /* margin: 0 auto; Not needed if parent is flex centering */
-        /* Ensure text within this container is centered */
-        text-align: center;
+        display: flex;         /* Make .slider-text-inner a flex container */
+        flex-direction: column;/* Stack .desc vertically */
+        justify-content: center;/* Vertically center .desc */
+        align-items: center;   /* Horizontally center .desc */
+        box-sizing: border-box;/* Ensure padding doesn't add to width/height */
       }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner {
-            text-align: center;
+            /* text-align: center; /* Flex align-items will handle centering of .desc block */
             margin: 0 1.5em; /* Adjust margin for mobile */
             padding: 1.5em; /* Adjust padding for mobile */
             min-height: auto; /* Allow content to define height on mobile */
@@ -378,11 +377,52 @@ body.offcanvas {
               width: 100%; } }
         /* Centering the .desc content if .slider-text-inner doesn't cover it */
         #colorlib-hero .flexslider .slider-text > .slider-text-inner .desc {
-          /* text-align: center; Already handled by .slider-text-inner */
-          /* display: inline-block; Optional: if you want the desc block to only be as wide as its content */
-          width: 100%; /* Ensure .desc takes available width if needed */
+          text-align: center; /* Centers the text within h1, h2, and the inline-block buttons within p */
+          /* width: 100%; /* Not strictly necessary if .slider-text-inner is centering it */
         }
 
+
+/* Hero Section Text and Button Group Styling */
+#colorlib-hero .flexslider .slider-text > .slider-text-inner .desc {
+    /* .desc is now a flex item centered by .slider-text-inner. */
+    /* This rule ensures the text *inside* h1, h2, p is centered. */
+    text-align: center;
+    /* The previous flex properties on .desc might be redundant if .slider-text-inner is doing the block centering.
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+#colorlib-hero .flexslider .slider-text > .slider-text-inner .desc .hero-buttons {
+    margin-top: 25px; /* Space between tagline (h2) and buttons */
+    /* The text-align:center from .slider-text-inner will center the inline-block buttons within this paragraph */
+}
+
+#colorlib-hero .flexslider .slider-text > .slider-text-inner .desc .hero-buttons .btn {
+    margin: 5px 8px; /* Symmetrical horizontal and some vertical margin for spacing when side-by-side */
+    /* vertical-align: top; /* Optional: if buttons of different text lengths misalign vertically */
+}
+
+/* Responsive adjustments for hero buttons */
+@media screen and (max-width: 768px) {
+    #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
+        font-size: 40px; /* Adjusted for smaller screens */
+    }
+    #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+        font-size: 1.5rem; /* Adjusted for smaller screens */
+        margin-bottom: 20px;
+    }
+    #colorlib-hero .flexslider .slider-text > .slider-text-inner .desc .hero-buttons .btn {
+        display: block; /* Stack buttons vertically */
+        width: auto;    /* Allow button to size to content, up to max-width */
+        max-width: 280px; /* Or a percentage like 80% */
+        margin: 10px auto; /* 10px top/bottom, auto left/right for centering */
+    }
+    /* Ensure the first stacked button doesn't have extra top margin from the general rule if not desired */
+    #colorlib-hero .flexslider .slider-text > .slider-text-inner .desc .hero-buttons .btn:first-child {
+        margin-top: 0; 
+    }
+}
 
 /* body.offcanvas was here, moved up */
 
