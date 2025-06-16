@@ -61,68 +61,80 @@ h1, h2, h3, h4, h5, h6 {
   position: relative; }
 
 #colorlib-aside {
-  padding-top: 4em; /* Increased padding */
-  padding-bottom: 40px;
+  padding-top: 3em; /* Adjusted padding */
+  padding-bottom: 30px;
   float: left;
-  width: 300px;
+  width: 280px; /* Slightly narrower sidebar */
   height: 100%;
   position: fixed;
   overflow-y: auto;
   z-index: 1001;
-  /* Glassmorphism for sidebar */
-  background: rgba(255, 255, 255, 0.65); /* Semi-transparent white */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-right: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 0 20px 20px 0; /* Rounded on the right */
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  /* Refined Glassmorphism for sidebar */
+  background: rgba(250, 250, 252, 0.8); /* Lighter, more subtle glass */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-right: 1px solid rgba(0, 0, 0, 0.07); /* Softer border */
+  border-radius: 0 18px 18px 0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; padding-left:15px; padding-right:15px;}
+  transition: 0.5s;
+  padding-left:10px; padding-right:10px; /* Reduced internal padding */
+}
   @media screen and (max-width: 768px) {
     #colorlib-aside {
-      width: 300px;
-      -moz-transform: translateX(-300px);
-      -webkit-transform: translateX(-300px);
-      -ms-transform: translateX(-300px);
-      -o-transform: translateX(-300px);
-      transform: translateX(-300px);
-      padding-top: 4em;
-      border-radius: 0; } }
-  /* Ensure author image is styled via CSS if inline style is removed */
+      width: 280px;
+      -moz-transform: translateX(-280px);
+      -webkit-transform: translateX(-280px);
+      -ms-transform: translateX(-280px);
+      -o-transform: translateX(-280px);
+      transform: translateX(-280px);
+      padding-top: 3em;
+      border-radius: 0;
+      background: rgba(252, 252, 253, 0.85); /* Slightly more opaque on mobile if needed */
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+     }
+  }
   #colorlib-aside .author-img {
-    background-image: url(../images/JOMugV2.jpg); /* Ensure path is correct */
+    background-image: url(../images/JOMugV2.jpg);
     background-size: cover;
     background-position: center center;
-    width: 150px;
-    height: 150px;
+    background-repeat: no-repeat; /* Added for good measure */
+    width: 120px; /* Slightly smaller mugshot */
+    height: 120px;
     margin: 0 auto;
-    margin-bottom: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
+    margin-bottom: 20px; /* Reduced margin */
     border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.5); }
+    /* Replaced explicit border with a more refined shadow combination */
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.08), 0 3px 10px rgba(0,0,0,0.1); /* Subtle inner "border" + soft outer shadow */
+    overflow: hidden; /* Add this to ensure content is clipped to the border-radius */
+  }
   #colorlib-aside .position {
     display: block;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em; /* Adjusted margin */
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #555; /* Slightly muted position text */
+  }
   #colorlib-aside #colorlib-logo {
-    text-align: right;
-    font-weight: 700;
-    font-size: 22px;
+    text-align: center; /* Center logo text */
+    font-weight: 600; /* Slightly less bold */
+    font-size: 20px; /* Adjusted size */
     margin-bottom: .5em;
     display: block;
     width: 100%; }
     #colorlib-aside #colorlib-logo a {
       display: block;
       text-align: center;
-      color: #000; /* Darker for better contrast on glass */
-      padding-right: .3em; }
+      color: #1D1D1F; /* Keep dark for readability */
+      padding-right: 0; /* Removed padding as it's centered */
+    }
   #colorlib-aside #colorlib-main-menu {
     display: block;
-    width: 100%; }
+    width: 100%;
+    padding-top: 1em; /* Add some space above nav */
+  }
     #colorlib-aside #colorlib-main-menu .collapse {
       display: block !important;
       height: 100% !important;}
@@ -132,69 +144,50 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0; }
       @media screen and (max-width: 768px) {
         #colorlib-aside #colorlib-main-menu ul {
-          margin: 0 0 2em 0; } }
+          margin: 0 0 1.5em 0; } }
       #colorlib-aside #colorlib-main-menu ul li {
-        margin: 0 0 10px 0;
+        margin: 0 0 8px 0; /* Slightly reduced margin */
         padding: 0;
         list-style: none;
-        font-size: 12px;
+        font-size: 13px; /* Slightly larger nav text */
         font-weight: 500;
         text-transform: uppercase;
-        letter-spacing: 1px; }
+        letter-spacing: 0.5px; /* Reduced letter spacing */
+      }
         #colorlib-aside #colorlib-main-menu ul li a {
-          color: #555555; /* Slightly lighter text for nav items */
+          color: #484848; /* Darker gray for nav items */
           text-decoration: none;
           position: relative;
-          padding: 10px 0;
+          padding: 8px 10px; /* Adjusted padding */
           font-family: "DM Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
-          -webkit-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s; }
+          -webkit-transition: 0.2s; /* Faster transition */
+          -o-transition: 0.2s;
+          transition: 0.2s;
+          /* border-radius: 8px; */ /* Rounded hover/active background - removed */
+        }
           #colorlib-aside #colorlib-main-menu ul li a:after {
-            content: "";
-            position: absolute;
-            height: 1px;
-            bottom: 7px;
-            left: 0;
-            right: 0;
-            background-color: #007AFF;
-            visibility: hidden;
-            -webkit-transform: scaleX(0);
-            -moz-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            -o-transform: scaleX(0);
-            transform: scaleX(0);
-            -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+            /* Removing the underline style for a cleaner look */
+            display: none;
+          }
           #colorlib-aside #colorlib-main-menu ul li a:hover {
             text-decoration: none;
-            color: #007AFF; } /* Accent color on hover */
-            #colorlib-aside #colorlib-main-menu ul li a:hover:after {
-              visibility: visible;
-              -webkit-transform: scaleX(1);
-              -moz-transform: scaleX(1);
-              -ms-transform: scaleX(1);
-              -o-transform: scaleX(1);
-              transform: scaleX(1); }
+            color: #007AFF;
+            /* background-color: rgba(0, 122, 255, 0.08); */ /* Subtle hover background - removed */
+          }
         #colorlib-aside #colorlib-main-menu ul li.active a {
-          color: #007AFF; } /* Accent color for active link */
-          #colorlib-aside #colorlib-main-menu ul li.active a:after {
-            visibility: visible;
-            -webkit-transform: scaleX(1);
-            -moz-transform: scaleX(1);
-            -ms-transform: scaleX(1);
-            -o-transform: scaleX(1);
-            transform: scaleX(1); }
+          color: #007AFF;
+          /* background-color: rgba(0, 122, 255, 0.12); */ /* Slightly more prominent active background - removed */
+          font-weight: 600;
+        }
   #colorlib-aside .colorlib-footer {
-    font-size: 15px;
+    font-size: 14px; /* Adjusted size */
     text-align: center;
     font-weight: 400;
-    color: #444; /* Darker footer text */
-    padding: 0 20px;
-    width: 100%; }
+    color: #666; /* Muted footer text */
+    padding: 0 15px; /* Adjusted padding */
+    width: 100%;
+    margin-top: 2em; /* Space above footer icons */
+  }
     @media screen and (max-width: 768px) {
       #colorlib-aside .colorlib-footer {
         position: relative;
@@ -206,26 +199,31 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0; }
       #colorlib-aside .colorlib-footer ul li {
         padding: 0;
-        margin: 0;
+        margin: 0 3px; /* Spacing between icons */
         display: inline;
         list-style: none; }
         #colorlib-aside .colorlib-footer ul li a {
-          /* color: rgba(255, 255, 255, 0.3); */
-          font-size: 22px; /* Adjusted size */
-          color: #333; /* Darker for better contrast on glass sidebar */
-          padding: 4px;
-          transition: color 0.3s ease; }
-          #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
+          font-size: 20px; /* Adjusted icon size */
+          color: #555;
+          padding: 6px; /* Padding for touch targets */
+          border-radius: 50%; /* Circular hover for icons */
+          transition: color 0.2s ease, background-color 0.2s ease;
+        }
+          #colorlib-aside .colorlib-footer ul li a:hover,
+          #colorlib-aside .colorlib-footer ul li a:active,
+          #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;
             outline: none;
-            color: #007AFF; } /* Accent on hover */
+            color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.08);
+          }
 
 .container-wrap {
   /* max-width: 1170px; */
   margin: 0 auto; }
 
 #colorlib-main {
-  width: calc(100% - 300px);
+  width: calc(100% - 280px); /* Adjusted for narrower sidebar */
   float: right;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -236,19 +234,18 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0 1em; } }
 
 #colorlib-hero {
-  min-height: 600px; /* Increased height */
-  /* background: #fff url(../images/loader.gif) no-repeat center center; */
+  min-height: 600px;
   width: 100%;
   float: left;
-  margin-bottom: 6em; /* Increased spacing */
+  margin-bottom: 6em;
   clear: both;
-  border-radius: 0 0 25px 25px; /* Rounded bottom corners for main hero */ }
-  /* Styling for hero slide background if inline style is removed */
+  border-radius: 0 0 25px 25px;
+}
   #colorlib-hero .slides > li {
-    background-image: url(../images/nycskyline24.jpg); /* Ensure path is correct */
+    background-image: url(../images/nycskyline24.jpg);
     background-position: center center;
-    background-size: cover; /* Ensure the image covers the slide area */
-    background-repeat: no-repeat; /* Prevent image tiling */
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   #colorlib-hero .flexslider {
     border: none;
@@ -262,11 +259,9 @@ h1, h2, h3, h4, h5, h6 {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom center;
-        /* background-blend-mode: multiply; */ /* Removed for a cleaner image */
-        /* background-color: #858585; */
         min-height: 400px;
         position: relative;
-        border-radius: 0 0 25px 25px; } /* Ensure slides also have rounded bottom */
+        border-radius: 0 0 25px 25px; }
     #colorlib-hero .flexslider .flex-control-nav {
       bottom: 20px;
       z-index: 1000;
@@ -296,47 +291,56 @@ h1, h2, h3, h4, h5, h6 {
     #colorlib-hero .flexslider .slider-text {
       display: table;
       opacity: 0;
-      min-height: 600px; /* Match hero height */
+      min-height: 600px;
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: middle;
-        min-height: 600px; /* Match hero height */
-        padding: 2em; /* Adjusted padding */
+        min-height: 600px;
+        padding: 2.5em; /* Adjusted padding */
         position: relative;
-        /* Glass effect for text box */
-        background: rgba(0, 0, 0, 0.25); /* Darker, subtle glass */
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border-radius: 15px;
-        margin: 2em; /* Add some margin so it doesn't touch edges */ }
+        /* Removed Glass effect for text box for a cleaner look directly on the image overlay */
+        /* background: rgba(255, 255, 255, 0.2); */ /* Lighter glass */
+        /* backdrop-filter: blur(10px); */ /* Adjusted blur */
+        /* -webkit-backdrop-filter: blur(10px); */
+        /* border-radius: 20px; */ /* More pronounced rounding */
+        margin: 0 auto; /* Centering the text block if no background */
+        /* box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+      }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner {
-            text-align: center; } }
+            text-align: center;
+            margin: 1.5em; /* Adjust margin for mobile */
+            padding: 1.5em; /* Adjust padding for mobile */
+          }
+        }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           margin: 0;
           padding: 0;
-          color: #fff; /* Ensure text is white for contrast on image */
+          color: #fff;
           font-family: "DM Sans", Roboto, "Helvetica Neue", Arial, sans-serif; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-          margin-bottom: 0.5em; /* Adjusted spacing */
-          font-size: 58px; /* Slightly smaller for balance */
+          margin-bottom: 0.5em;
+          font-size: 58px;
           line-height: 1.3;
           font-weight: 700;
-          text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+          text-shadow: 0 2px 5px rgba(0,0,0,0.4); /* Slightly stronger shadow for readability */
+        }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-              font-size: 28px; } }
+              font-size: 32px; /* Adjusted for mobile */
+            }
+          }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
-          font-size: 2rem;
+          font-size: 1.8rem; /* Adjusted size */
           line-height: 1.6;
           margin-bottom: 30px;
           font-weight: 300;
           font-family: "DM Sans", "Quicksand", Arial, sans-serif; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 a {
             font-weight: 500;
-            color: #80ceff; /* Lighter blue for links on dark bg */
-            border-bottom: 1px solid #80ceff; }
+            color: #a0d8ff; /* Lighter blue for links on dark bg */
+            border-bottom: 1px solid #a0d8ff; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner .heading-section {
           font-size: 50px; }
           @media screen and (max-width: 768px) {
@@ -349,10 +353,10 @@ h1, h2, h3, h4, h5, h6 {
           text-transform: uppercase;
           letter-spacing: 2px;
           color: #fff;
-          padding: 12px 25px !important; /* Slightly larger padding */
+          padding: 12px 25px !important;
           border: 1px solid rgba(255,255,255,0.7);
           font-weight: 500;
-          border-radius: 25px; /* Rounded buttons */
+          border-radius: 25px;
           background: rgba(255,255,255,0.1);
           backdrop-filter: blur(3px);
           -webkit-backdrop-filter: blur(3px); }
@@ -362,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
             background: transparent !important;
             font-weight: 600; }
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
-              background: transparent !important;
+              background: rgba(255,255,255,0.2) !important; /* Subtle hover for learn button */
               border: 1px solid #fff !important; }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
@@ -376,24 +380,25 @@ body.offcanvas {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-    width: 300px;
+    width: 280px; /* Match sidebar width */
     height: 100%;
-    /* background: #f2f3f7; */ /* Already styled with glassmorphism */
     z-index: 999;
     position: fixed; }
   body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
     top: 0;
-    -moz-transform: translateX(300px);
-    -webkit-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    -o-transform: translateX(300px);
-    transform: translateX(300px); }
+    -moz-transform: translateX(280px); /* Match sidebar width */
+    -webkit-transform: translateX(280px);
+    -ms-transform: translateX(280px);
+    -o-transform: translateX(280px);
+    transform: translateX(280px); }
 
 .colorlib-narrow-content {
   padding: 0 2.5em; }
   @media screen and (max-width: 768px) {
     .colorlib-narrow-content {
-      padding: 0; } }
+      padding: 0 1em; /* Add some padding on mobile for narrow content */
+     }
+  }
 
 .no-gutters {
   margin: 0;
@@ -402,23 +407,17 @@ body.offcanvas {
 
 
 .colorlib-experience, /* Kept for potential future use, but not in index.html */
-/* .colorlib-skills, */ /* Removed as per previous cleanup */
-/* .colorlib-education, */ /* Removed as per previous cleanup */
-/* .colorlib-blog, */ /* Removed as per previous cleanup */
 .colorlib-work,
 .colorlib-about,
 .colorlib-services,
 .colorlib-contact {
-  padding-top: 6em; /* Increased top padding */
-  padding-bottom: 6em; /* Consistent bottom padding */
+  padding-top: 6em;
+  padding-bottom: 6em;
   clear: both;
   width: 100%;
   display: block; }
   @media screen and (max-width: 768px) {
     .colorlib-experience,
-    /* .colorlib-skills, */
-    /* .colorlib-education, */
-    /* .colorlib-blog, */
     .colorlib-work,
     .colorlib-about,
     .colorlib-services,
@@ -426,13 +425,12 @@ body.offcanvas {
       padding-top: 4em;
       padding-bottom: 4em; } }
 
-/* CSS for removed inline style on contact section padding */
 .colorlib-contact {
-  padding-bottom: 6em; /* Default padding, adjust if specific large padding is needed */
+  padding-bottom: 6em;
 }
 @media screen and (min-width: 768px) {
   /* .colorlib-contact {
-    padding-bottom: 20em; /* Re-apply if this very large padding is specifically desired * /
+    padding-bottom: 20em;
   /* } */
 }
 
@@ -443,8 +441,8 @@ body.offcanvas {
   position: relative; }
 
 .colorlib-heading {
-  font-size: 20px; /* Slightly larger section headings */
-  margin-bottom: 3em; /* Reduced for tighter design */
+  font-size: 20px;
+  margin-bottom: 3em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -454,26 +452,21 @@ body.offcanvas {
     display: block; }
   @media screen and (max-width: 768px) {
     .colorlib-heading {
-      margin-bottom: 3em; } }
-
+      margin-bottom: 2.5em; /* Slightly less margin on mobile */
+      font-size: 18px; /* Adjust heading size for mobile */
+    }
+  }
 .heading-meta {
   margin-bottom: 15px;
   display: block;
-  font-size: 12px; /* Slightly larger meta heading */
+  font-size: 12px;
   text-transform: uppercase;
-  color: #666; /* Slightly darker meta */
+  color: #666;
   font-weight: 500;
   letter-spacing: 5px; }
 
-/* .about-img {
-  width: 100%;
-  height: 600px;
-  margin-bottom: 30px;
-} */ /* Commented out as it's not used and large */
-
-/* CSS for removed inline style on about paragraph */
 .about-desc p {
-  text-align: left; /* Default left align is better for readability than justify */
+  text-align: left;
 }
 
 .about-desc h3 {
@@ -482,21 +475,6 @@ body.offcanvas {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 500; }
-
-/* .hire { */ /* Commented out as not used */
-  /* padding: 2em; */
-  /* background: #F4B400; } */
-  /* .hire h2 { */
-    /* line-height: 1.5; } */
-  /* .hire .btn-hire { */
-    /* color: #000; */
-    /* text-transform: uppercase; */
-    /* letter-spacing: 1px; */
-    /* bordeR: 1px solid #000; */
-    /* padding: 2px 10px; } */
-
-/* .fancy-collapse-panel .panel-default > .panel-heading { */ /* Commented out as not used */
-  /* padding: 0; } */
 
 .panel-heading a {
   padding: 20px 25px;
@@ -676,7 +654,7 @@ body.offcanvas {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
-  .services .icon2 {
+  .services .icon2 { /* For "About" section service-like items */
     display: block;
     margin-bottom: 20px; }
     .services .icon2 i {
@@ -703,15 +681,17 @@ body.offcanvas {
   .services.color-6 {
     /* border-bottom: 2px solid #007AFF; */ }
 
-.services {
+/* Specific styling for service items in "What I Do?" section */
+.colorlib-services .services { /* Target .services only within .colorlib-services section */
   margin-bottom: 80px;
   position: relative;
   z-index: 0; }
   @media screen and (max-width: 768px) {
-    .services {
+    .colorlib-services .services {
       margin-bottom: 3em; } } /* Adjusted margin for mobile */
+
 /* Styling for icons in "What I Do?" section (using <span class="icon"><i ...></span>) */
-.services .icon {
+.colorlib-services .services .icon {
   display: inline-block; /* Allows centering with text-align on parent */
   width: 60px;           /* Define size */
   height: 60px;          /* Define size */
@@ -721,15 +701,15 @@ body.offcanvas {
   border-radius: 50%;    /* Circular background */
   text-align: center;
 }
-    .services .icon i {
+    .colorlib-services .services .icon i {
       font-size: 30px;
       color: #007AFF; /* Accent color for the icon itself */
       vertical-align: middle; /* Ensure icon is centered */
     }
-  .services .desc {
+  .colorlib-services .services .desc {
     margin-top: 0; /* Adjusted as icon is now in flow */
    }
-    .services .desc h3 {
+    .colorlib-services .services .desc h3 {
       font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
@@ -737,11 +717,16 @@ body.offcanvas {
     }
 
 /* Remove color-specific icon backgrounds if not desired with the new glass look */
-.services.color-1 .icon, .services.color-2 .icon, .services.color-3 .icon,
-.services.color-4 .icon, .services.color-5 .icon, .services.color-6 .icon {
+.colorlib-services .services.color-1 .icon,
+.colorlib-services .services.color-2 .icon,
+.colorlib-services .services.color-3 .icon,
+.colorlib-services .services.color-4 .icon,
+.colorlib-services .services.color-5 .icon,
+.colorlib-services .services.color-6 .icon {
     /* background: rgba(0, 122, 255, 0.1); /* Example: Use a consistent light blue for all */
     /* Or remove if individual icon colors are preferred via .icon i */
 }
+
 
 .blog-entry {
   width: 100%;

@@ -207,16 +207,19 @@
 	var clickMenu = function () {
 
 		$('#navbar a:not([class="external"])').click(function (event) {
-			var section = $(this).data('nav-section'),
-				navbar = $('#navbar');
+			var section = $(this).data('nav-section');
+			var navbar = $('#navbar');
+
+			// Immediately update the active state on click
+			navActive(section);
 
 			if ($('[data-section="' + section + '"]').length) {
 				$('html, body').animate({
 					scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-				}, 500);
+				}, 500, 'easeInOutExpo'); // Added easing for consistency
 			}
 
-			if (navbar.is(':visible')) {
+			if (navbar.is(':visible') && $('body').hasClass('offcanvas')) { // Ensure offcanvas is active before trying to close
 				navbar.removeClass('in');
 				navbar.attr('aria-expanded', 'false');
 				$('.js-colorlib-nav-toggle').removeClass('active');
@@ -231,13 +234,10 @@
 
 	// Reflect scrolling in navigation
 	var navActive = function (section) {
-
-		var $el = $('#navbar > ul');
-		$el.find('li').removeClass('active');
-		$el.each(function () {
-			$(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
-		});
-
+		// More direct way to set the active class
+		var $navItems = $('#navbar > ul > li');
+		$navItems.removeClass('active');
+		$navItems.find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
 	};
 
 	var navigationSection = function () {
