@@ -217,7 +217,8 @@ h1, h2, h3, h4, h5, h6 {
         #colorlib-aside .colorlib-footer ul li a {
           font-size: 20px; /* Adjusted icon size */
           color: #555;
-          padding: 6px; /* Padding for touch targets */
+          text-decoration: none; /* Remove underline from icons */
+          padding: 6px; 
           border-radius: 50%; /* Circular hover for icons */
           transition: color 0.2s ease, background-color 0.2s ease;
         }
@@ -480,6 +481,13 @@ body.offcanvas {
 
 .about-desc p {
   text-align: left;
+}
+.about-desc p a {
+  text-decoration: none; /* Remove underline from links in about section paragraphs */
+  border-bottom: 1px solid #007AFF; /* Optional: add a subtle border instead of underline */
+}
+.about-desc p a:hover {
+  border-bottom-color: #0056b3; /* Darker border on hover */
 }
 
 .about-desc h3 {
@@ -901,13 +909,20 @@ body.offcanvas {
       color: #fff; /* Ensure white text for contrast */
       text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
 
-    .project .desc h4  {
-      font-size: 11px;
-      padding-top: 15px;
+    .project .desc h4 { 
+      font-size: 12px; /* Slightly adjusted for readability */
       font-style: italic;
-    }
+      color: #ccc;
+      margin-top: 5px; /* Space above h4 */
+      margin-bottom: 8px; /* Space below h4 */
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-weight: 500; }
       .project .desc h3 a, .project .desc h4 a { /* Ensure links are also white */
-        color: #fff; }
+        color: #fff;
+        text-decoration: none; /* Ensure no underline */ }
+      .project .desc h4 a:hover {
+        color: #fff; /* Brighter on hover */ }
     .project .desc span {
       display: block;
       color: rgba(255, 255, 255, 0.7);
@@ -918,10 +933,12 @@ body.offcanvas {
       -o-transition: transform 0.3s, opacity 0.3s;
       transition: transform 0.3s, opacity 0.3s;
       transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-      -webkit-transform: translate3d(0, 0, 0); /* Keep centered */
-      transform: translate3d(0, 0, 0); /* Keep centered */ }
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      line-height: 1.4; /* Improve readability for descriptions */ }
       .project .desc span a { /* Ensure links are also white */
-        color: #eee; }
+        color: #eee;
+        text-decoration: none; /* Ensure no underline */ }
     @media screen and (max-width: 768px) {
       .project .desc {
         opacity: 1;
@@ -929,13 +946,19 @@ body.offcanvas {
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px); }
         .project .desc h3 {
-          font-size: 22px; /* Corrected typo and adjusted size */
+          font-size: 15px; /* Adjusted for mobile */
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-          color: #fff; }
+          color: #fff;
+          margin-bottom: 5px; }
+        .project .desc h4 {
+          font-size: 11px; /* Adjusted for mobile */
+          margin-top: 3px;
+          margin-bottom: 5px; }
         .project .desc span {
           -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); } }
+          transform: translate3d(0, 0, 0);
+          font-size: 12px; } }
   .project:hover .desc {
     opacity: 1; }
     .project:hover .desc h3 {
@@ -1376,8 +1399,8 @@ body.offcanvas {
   display: inline-block; /* Changed from block to auto width */
   width: auto; /* Allow padding to define width, or set a max-width */
   margin: 1.5em auto 0; /* Center button */
-  padding: 12px 30px;
-  font-size: 1.1em;
+  padding: 8px 15px; /* Match general button padding */
+  font-size: 12px; /* Match general button font size */
 }
 
 /* Responsive adjustments for contact section */

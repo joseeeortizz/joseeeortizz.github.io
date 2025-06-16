@@ -55,7 +55,7 @@
         var isHidden = moreProjects.style.display === "none";
 
         // Toggle visibility
-        moreProjects.style.display = isHidden ? "block" : "none";
+        moreProjects.style.display = isHidden ? "flex" : "none"; // This is correct for Bootstrap 5 rows
         
         // Optionally change button text to "Show Less"
         this.textContent = isHidden ? "Show Less" : "Load More";
