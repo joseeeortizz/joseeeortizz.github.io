@@ -914,7 +914,6 @@ body.offcanvas {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
     width: 30px;
     height: 3px;
     color: #000;
@@ -1904,7 +1903,6 @@ body.offcanvas {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
     width: 30px;
     height: 3px;
     color: #000;
