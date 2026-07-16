@@ -1,56 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-366WX6WL6P"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-366WX6WL6P');
-  </script>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Jose Ortiz 's Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Jose O">
-  <meta property="og:image" content="https://github.com/joseeeortizz/joseeeortizz.github.io/blob/main/images/JoseMugshot2024.jpg?raw=true">
-  <meta property="og:description" content="Jose Ortiz's Resume">
-  <meta property="og:title" content="Jose Ortiz's Resume">
-  <meta property="og:url" content="https://joseeeortizz.com/resume">
-
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
-
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/flexslider.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <meta name="description" content="Résumé for José Ortiz, Computer Science student and developer.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://joseeeortizz.com/resume.html">
+  <title>Résumé | José Ortiz</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-  </head>
-
-<body>
-  <div class="container">
-    <p style="text-align:center; margin-top: 20px;">
-      <a href="Jose Ortiz - Resume.pdf" download="Jose Ortiz - Resume.pdf" class="btn btn-primary">Download Resume (PDF)</a>
-    </p>
-    <iframe src="Jose Ortiz - Resume.pdf" width="100%" height="600px"></iframe>
-  </div>
-
-  <div id="footer">
-    <p><center>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Jose Ortiz. All rights reserved.</center></p>
-  </div>
-  <!-- Scripts might be needed if style.css or other components depend on them. Review if all are necessary. -->
-  <script src="js/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <style>
+    .resume-page { min-height:100svh; display:grid; grid-template-rows:auto 1fr auto; }
+    .resume-header { padding:2rem 0; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+    .resume-header h1 { font-size:clamp(2rem, 5vw, 3.5rem); margin:0; }
+    .resume-document { width:min(1120px, calc(100% - 2rem)); height:calc(100svh - 175px); min-height:550px; margin:0 auto 2rem; border:1px solid var(--line); background:white; }
+    .resume-document iframe { display:block; width:100%; height:100%; border:0; }
+  </style>
+</head>
+<body class="resume-page">
+  <header class="resume-header shell">
+    <a class="wordmark" href="index.html" aria-label="José Ortiz home">JO<span>.</span></a>
+    <h1>Résumé</h1>
+    <a class="button button-primary" href="Jose%20Ortiz%20-%20Resume.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+  </header>
+  <main class="resume-document"><iframe src="Jose%20Ortiz%20-%20Resume.pdf" title="José Ortiz résumé"><a href="Jose%20Ortiz%20-%20Resume.pdf">Download José Ortiz’s résumé as a PDF</a></iframe></main>
+  <footer class="site-footer shell"><p>© <span id="year"></span> José Ortiz</p><a href="index.html">Home</a></footer>
   <script src="js/main.js"></script>
 </body>
 </html>
